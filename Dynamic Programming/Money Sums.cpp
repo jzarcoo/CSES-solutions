@@ -23,7 +23,7 @@ int main(){
   }
   vector<int> a;
   for(int i=l; i<=r;i++){
-	if(can[i]) a.push_back(i);;
+	if(can[i]) a.push_back(i);
   }
   cout<<a.size()<<endl;
   for(int x: a)cout<<x<<' ';
