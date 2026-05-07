@@ -22,7 +22,7 @@ int main(){
         if(i<=r){
             p[i] = min(r-i, p[l + r-i]);
         }
-        while(t[i-p[i]] == t[i+p[i]]){
+        while(t[i-p[i]-1] == t[i+p[i]+1]){
             p[i]++;
         }
         if(i+p[i] > r){
@@ -33,13 +33,14 @@ int main(){
 
     int center = 0, len = 0;
     for(int i=1; i<=nt; i++){
+        cout << p[i]<<' ';
         if(p[i] > len){
             len = p[i];
             center = i;
         }
     }
+    cout <<endl;
 
-    len--;
     int ini = (center-1-len)/2;
     cout << s.substr(ini, len)<<endl;
 }
